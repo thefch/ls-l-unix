@@ -1,0 +1,22 @@
+listfiles.c -> implements the "ls -l" command of UNIX
+
+backupfiles.c -> extends listfiles.c and it shows the files of current directory and sub-directories after a specific date using specified switches:
+	-t {<filename>,<date>} path - used to specify the cut-off ?me for the incremental backup. 
+				      The -t switch must be followed by the name of a file, or a quote 
+				      delimited string containing a date in the format given above
+
+	-h - program prints a help message explaining the usage of the command and then exits.
+
+backup.c  -> extends backupfiles.c to an incremental backup utility by specifing the name of the archive file
+				    that the current directory and sub-directories are going to be saved to
+		
+	-f <filename> - used to specify the name of the archive file to be created or used to restore
+			files from the backup
+				
+
+HOW TO USE:
+./backupfiles.c *switch*
+
+./backup.c *switch* *pathOfDirectory*
+
+			
